@@ -1,9 +1,17 @@
 #HOC Project
 HOC Project Main Repository
 
-Adafruit MCP3008 library
-Python3
-Twython AND Oauth
+Adafruit MCP3008 library:
+https://github.com/adafruit/Adafruit_Python_MCP3008
+
+
+Python3:
+sudo apt-get install python3
+
+
+Twython AND Oauth:
+https://www.raspberrypi.org/learning/getting-started-with-the-twitter-api/requirements/software/
+https://www.raspberrypi.org/forums/viewtopic.php?t=162900&p=1054189
 
 #ATTiny 85 Setup Procedure
 * 1) Connect pins accordingly
