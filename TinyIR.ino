@@ -47,20 +47,30 @@ void loop() {
   mySerial.println();
 
   //Power button turns an LED on or off
+  //The command of the power button
   int kArray[] = {0,0,1,0,0,0,0,1};
+ 
+  //If the pulse array command = key array
   if (check(&pArray[0], &kArray[0])){
+    //If the led state is on
     if (ledState){
+      //Turn it off, set the state to off
       digitalWrite(led, LOW);
       ledState = 0;
     }else{
+      //Otherwise, vice versa
       digitalWrite(led, HIGH);
       ledState = 1;
     }
+    //Increment the first element in the pulse array
+    //This prevents the check from being true until a button is pressed again
     pArray[0] += 1;
   }
+  //Print the result of the array check
   mySerial.println(check(&pArray[0], &kArray[0]));
 }
 
+//Function for retreiving and organizing the IR pulses
 void getPulses(int pin, int *pulses){
   int p;
   int i;
@@ -96,12 +106,17 @@ void getPulses(int pin, int *pulses){
   delay(500);
 }
 
+//Function for comparing the pulse array and key array
 bool check(int *input, int *key){
+  //Start at true (they're the same)
   bool state = true;
+  //Loop through the relevant parts of the arrays
   for (int i = 0; i < 8; i++){
     if (input[i+17] != key[i]){
+      //If any of the elements are not equal, set the state to false
       state = false;
     }
+    //Print the arrays
     mySerial.print(input[i+17]);
     mySerial.print(key[i]);
     mySerial.println();
