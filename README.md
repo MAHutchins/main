@@ -1,5 +1,5 @@
 #HOC Project
-HOC Project Main Repository
+Hutchins-O'Dell-Cooper Senior Design Project Main Repository
 
 Adafruit MCP3008 library:
 https://github.com/adafruit/Adafruit_Python_MCP3008
