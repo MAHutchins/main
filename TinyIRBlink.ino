@@ -1,3 +1,9 @@
+/* Blinks the received IR signal on an LED
+*
+* The purpose of this script is to enable the user to decipher
+* an IR signal without needing a serial connection.
+*/
+
 /*ISP:
  * MISO VCC
  * SCK  MOSI
@@ -10,22 +16,15 @@
  * PB4  PB1/MISO
  * GND  PB0/MOSI
  */
- 
-#include <SoftwareSerial.h>
 
 //Array for 32 bits of the signal
 int pArray[32];
 bool ledState = 0;
 bool pressed = 0;
 
-const int rx = 3;
-const int tx = 4; //Physical pin 3 to Arduino TX
 int led = 3; //Physical pin 2 to LED
 
-SoftwareSerial mySerial(rx, tx);
-
 void setup() {
-  mySerial.begin(9600);
   pinMode(led, OUTPUT);
 }
 
@@ -33,19 +32,6 @@ void loop() {
   //Get the pulses from pin 2 (physical pin 7) and store them in pArray
   getPulses(2, &pArray[0]);
   
-  //Print address segment (bits 1-8)
-  mySerial.print("Addr: ");
-  for (int i = 0; i <= 7; i++){
-    mySerial.print(pArray[i]);
-  }
-
-  //Print command segment (bits 18-25)
-  mySerial.print(" Cmd: ");
-  for (int i = 17; i <= 24; i++){
-    mySerial.print(pArray[i]);
-  }
-  mySerial.println();
-
   //Blink the command on an LED
   for (int i = 17; i <= 24; i++){
     if (pArray[i]){
