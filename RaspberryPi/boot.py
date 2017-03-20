@@ -16,7 +16,7 @@ print("API info imported successfully.")
 
 n = random.uniform(0,10)
 t = datetime.datetime.now()
-tweetStr = t.strftime('%d/%m/%Y %H:%M:%S ') + str(n)
+tweetStr = t.strftime('%m/%d/%Y %H:%M:%S ') + str(n)
 
 print("Tweet is " + tweetStr)
 print("Sending boot tweet...")
