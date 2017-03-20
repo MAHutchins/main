@@ -27,5 +27,13 @@ print(got boot.py!)
 #Git WiringPi
 sudo git clone git://git.drogon.net/wiringPi
 cd wiringPi
-#./build
+./build
 print(got WiringPi!)
+
+#Git AVRDude
+sudo apt-get install bison automake autoconf flex git gcc
+sudo apt-get install gcc-avr binutils-avr avr-libc
+git clone https://github.com/kcuzner/avrdude 
+cd avrdude/avrdude
+./bootstrap && ./configure && sudo make install
+print(Got AVRDude!)
