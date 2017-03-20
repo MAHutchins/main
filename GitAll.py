@@ -23,3 +23,9 @@ sudo git clone https://github.com/HOCProj/main/ RaspberryPi/auth.py
 print(got auth.py!)
 sudo git clone https://github.com/HOCProj/main/ RaspberryPi/boot.py
 print(got boot.py!)
+
+#Git WiringPi
+sudo git clone git://git.drogon.net/wiringPi
+cd wiringPi
+#./build
+print(got WiringPi!)
