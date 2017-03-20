@@ -31,7 +31,7 @@ cd wiringPi
 print(got WiringPi!)
 
 #Git AVRDude
-print(*** THIS WILL PAUSE AND TAKE SOME TIME ***)
+print(*** THIS WILL PAUSE SEVERAL TIMES ***)
 sudo apt-get install bison automake autoconf flex git gcc
 sudo apt-get install gcc-avr binutils-avr avr-libc
 git clone https://github.com/kcuzner/avrdude 
