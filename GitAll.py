@@ -38,3 +38,10 @@ git clone https://github.com/kcuzner/avrdude
 cd avrdude/avrdude
 ./bootstrap && ./configure && sudo make install
 print(Got AVRDude!)
+
+#Git ATTiny example script
+cd ~
+mkdir ATtiny85
+cd ATtiny85
+mkdir blinky
+cd blinky
