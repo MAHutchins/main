@@ -13,6 +13,9 @@ Twython AND Oauth:
 https://www.raspberrypi.org/learning/getting-started-with-the-twitter-api/requirements/software/
 https://www.raspberrypi.org/forums/viewtopic.php?t=162900&p=1054189
 
+AVRDude:
+http://www.raspihub.com/go/4c3370e8431b091c1698106135127581a646f3e2829fc26123d2bbfb34199dfa
+
 #ATTiny 85 Setup Procedure
 * 1) Connect pins accordingly
 * 2) Set board to Arduino Uno, Programmer to AVRISP MKII
