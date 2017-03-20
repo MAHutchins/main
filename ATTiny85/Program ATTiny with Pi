@@ -1,0 +1,30 @@
+#Programming the ATTiny85 with the RaspberryPi
+
+#Compiling an Arduino sketch into a .hex file
+This step is not necessary if you have a .hex file already
+1) Open the Arduino IDE. Under File>Preferences, check verbose output on compilation
+2) Set board settings (ATTiny85, 1MHz internal clock)
+3) Click Verify (the check mark) to compile the sketch into a .hex file
+4) The last line the compiler outputs is a file path, something like C:\Users.../sketch_mar20a.cpp.hex 
+5) Navigate to that path and copy the contents of the .hex file
+
+#Writing a .hex file to the ATTiny85
+1) Connect the RPI jumper and disconnect the MCP jumper
+2) (OPTIONAL) Connect the Reset pin of the ATTiny to GPIO 22 (pin 15) on the Pi
+3) If you used the above section to obtain a .hex file, make a new .hex file on the Pi and paste it in:
+    sudo nano blinky.hex
+    ctrl+v
+    ctrl+x
+    y
+    Enter
+4) If you followed optional step 2, pull the reset pin low:
+    gpio -g mode 22 out
+    gpio -g write 22 0
+    
+    Otherwise, hold the reset button down while you execute step 5
+5) Compile and upload the .hex file:
+    sudo /usr/local/bin/avrdude -p t85 -P /dev/spidev0.0 -c linuxspi -b 9600 -U flash:w:XXX.hex
+    
+    Replace XXX with the file name (TinyBlink, TinyIR, etc.)
+6) Release the reset button, or run
+    gpio -g write 22 1
