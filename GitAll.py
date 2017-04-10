@@ -1,6 +1,9 @@
 #!usr/bin/python
 
-#Git all of the files for the ADC and Twitter
+#Git all necessary files
+
+#Git Python3
+sudo apt-get install python3
 
 #Git MCP3008 files
 #Guide here:
