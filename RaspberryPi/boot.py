@@ -1,3 +1,4 @@
+#This script tweets a random number and prints some diagnostic information. Place in /etc/profiles to run on login
 #!usr/bin/python
 print("Boot script started")
 
