@@ -17,6 +17,7 @@ http://www.raspihub.com/go/4c3370e8431b091c1698106135127581a646f3e2829fc26123d2b
 These libraries will be automatically downloaded and installed by executing the GitAll.py file.
 
 **User Manual**
+
 Setup guides and example scripts are available in the appropriate folders (Raspberry Pi and ATTiny85).
 
 The primary purpose of our project is to provide a cheap means of extending the capabilities of the Raspberry Pi and the ATTiny85. We also have the secondary purpose of compiling all of the necessary software and troubleshooting into one location, so that a person with beginner-intermediate level experience with circuitry and code can avoid the wiring mess of traditional electronics and the days or weeks of research into software.
