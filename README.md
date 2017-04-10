@@ -1,4 +1,4 @@
-#**HOC Project**
+**#HOC Project**
 
 ##Hutchins-O'Dell-Cooper Senior Design Project Repository
 
